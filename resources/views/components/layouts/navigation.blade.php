@@ -12,8 +12,10 @@
 
       </ul>
       <form class="form-inline ms-auto  my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+        
+        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="/register"> Log in</a>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sing up</button>
+
       </form>
     </div>
   </nav>
