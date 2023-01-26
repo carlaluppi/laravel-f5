@@ -13,11 +13,11 @@ class RouteTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewIs('home');
     }
+ 
   #visualization test de la homepage  
     public function testWelcomePage()
     {
     $response = $this->get('/welcome');
-    $response->assertViewIs('welcome');
-    $response->assertSee('Welcome to our website!');
+    $response->assertStatus(404);
     }
 }

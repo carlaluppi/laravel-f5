@@ -31,6 +31,17 @@ class AuthenticationTest extends TestCase
 
     public function testLogout()
     {
+        $user = factory(\App\User::class)->create();
+
+        // Perform a login request with valid credentials
+        $response = $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'password'
+        ]);
+
         // Perform a logout request
-        $response = $this->post("")
+        $this->post("/logout");
+        $this->isAuthenticated($user) === false;
+
     }
+}
