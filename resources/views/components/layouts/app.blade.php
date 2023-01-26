@@ -9,9 +9,13 @@
 </head>
 <body>
     <!-- menú de navegación -->
-    <x-navbar.navbar/>
+    <header>
+        <x-navbar.navbar/>
+    </header>
     <!-- contenido -->
-    {{ $slot }}
+    <main>
+        {{ $slot }}
+    </main>
 
 </body>
 @vite('resources/js/app.js')
