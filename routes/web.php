@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterUserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ControllerEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::view('/register', 'auth.register')->name('register');
+// crud events
+
+// Route::get('/event', [ControllerEvent::'index'])->name('events.index');

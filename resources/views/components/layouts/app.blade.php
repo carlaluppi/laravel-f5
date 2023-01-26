@@ -12,7 +12,7 @@
 <body>
     
     <x-layouts.navigation/>
-    
+    {{-- <x-events.index/> --}}
     {{ $slot }}
 
 </body>
