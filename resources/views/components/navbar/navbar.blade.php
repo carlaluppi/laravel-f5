@@ -32,11 +32,12 @@
 
 
           <li class="nav-item">
-            <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">{{ __('login') }}</a>
+            <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Iniciar sesión</a>
           </li>
             @else
           <li class="nav-item">
             <form method="POST" action="{{ route('logout') }}">
+                @csrf
                 <button type="submit" class="btn btn-primary text-white nav-link" >{{ __('logout') }}</button>
             </form>
           </li>
